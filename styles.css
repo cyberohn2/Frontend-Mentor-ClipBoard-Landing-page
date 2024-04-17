@@ -13,7 +13,7 @@ body{
  flex-direction: column;
  justify-content: center;
  align-items: center;
- background: url(images/bg-header-desktop.png);
+ background: url("bg-header-desktop.png");
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
@@ -31,9 +31,10 @@ body{
  font-size: 18px;
  font-size: 3rem;
  font-weight: 900;
+ text-align: center;
 }
 .head p{
- width: 850px;
+ min-width: 43%;
  font-size: 1.5rem;
  text-align: center;
 }
@@ -73,7 +74,7 @@ button:hover{
  align-items: center;
 }
 .firstText p{
- width: 700px;
+ max-width: 73%;
  font-size: 18px;
  text-align: center;
 }
@@ -113,7 +114,7 @@ justify-content: center;
  margin-bottom: 50px;
 }
 .part2text-1 p{
- width: 700px;
+ max-width: 80%;
  font-size: 18px;
  text-align: center;
 }
@@ -160,7 +161,7 @@ justify-content: center;
 }
 .part5 p{
  text-align: center;
- width: 600px;
+ max-width: 33%;
  margin-bottom: 30px;
 }
 footer{
@@ -173,8 +174,8 @@ footer{
  color: white;
 }
 .footerNavLink{
- width: 500px;
- height: 50px;
+ max-width: 500px;
+ max-height: 50px;
  display: flex;
  flex-direction: column;
  flex-wrap: wrap;
@@ -188,11 +189,63 @@ a:hover{
  justify-content: space-around;
  align-items: center;
 }
-.social_link div{
- margin: 10px;
-}
+
 i:hover{
     cursor: pointer;
     transform: scale(1.1,1.1);
     transition: 100ms linear;
+}
+@media (max-width:500px) {
+    .headButton{
+        flex-direction: column;
+    }
+    .flexbox{
+        flex-direction: column;
+    }
+    .flexbox img{
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
+    }
+    .secText{
+        margin: unset;
+    }
+    .secText div{
+        margin-bottom: 15px;
+    }
+    .secText div h1, .secText div p{
+        text-align: center;
+    }
+    .secText div h1{
+        margin-bottom: 10px;
+    }
+    .part2 img{
+        max-width: 80%;
+    }
+    .part3{
+        flex-direction: column;
+    }
+    .part3 div{
+        max-width: 60%;
+        margin: 0 auto 30px auto;
+    }
+    .part4{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .part4 img{
+        max-width: 60%;
+        margin-bottom: 30px;
+    }
+    .part5 p{
+        max-width: 80%;
+    }
+    footer{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .footerNavLink{
+        flex-wrap: nowrap;
+    }
 }
